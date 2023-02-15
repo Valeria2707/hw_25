@@ -1,39 +1,39 @@
 export const btn = [
     {
       id: 0,
-      value: '9'
-    },
-    {
-      id: 1,
-      value: '5'
-    },
-    {
-      id: 2,
       value: '6'
     },
     {
-      id: 3,
+      id: 1,
       value: '7'
     },
     {
-      id: 4,
+      id: 2,
       value: '8'
     },
     {
-      id: 5,
-      value: '1'
+      id: 3,
+      value: '9'
     },
     {
-      id: 6,
+      id: 4,
       value: '2'
     },
     {
-      id: 7,
+      id: 5,
       value: '3'
     },
     {
-      id: 8,
+      id: 6,
       value: '4'
+    },
+    {
+      id: 7,
+      value: '5'
+    },
+    {
+      id: 8,
+      value: '1'
     },
     {
       id: 9,
@@ -61,6 +61,10 @@ export const btnOperation = [
   {
     id: 15,
     value: '%'
+  },
+  {
+    id: 18,
+    value: 'x^n'
   },
   {
     id: 16,

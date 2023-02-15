@@ -53,9 +53,14 @@ function App() {
       setResult(result /= 100)
       console.log(result)
     }
+    else if(operations === 'x^n')
+    {
+      setResult(result = Math.pow(result, values))
+      console.log(result)
+    }
     else if(operations === '√')
     {
-      setResult(Math.sqrt(result))
+      setResult(result = Math.sqrt(result))
       console.log(result)
     }
     else if(operations === 'С'){
