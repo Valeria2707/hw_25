@@ -7,6 +7,7 @@ function App() {
   let [result, setResult] = useState(0);
   let [operations, setOperations] = useState('+');
   let [showResult, setShowResult] = useState(false);
+  let newRes = result;
 
   const showValue = (event) =>{
     const number = event.target.innerHTML
@@ -20,9 +21,9 @@ function App() {
     const operation = event.target.innerHTML
     console.log(operation);
     setOperations(operation)
-    setValue('');
     const values = Number(value);
     setResult(values)
+    setValue('');
   }
 
   const showRes = () =>{
@@ -30,46 +31,43 @@ function App() {
     const values = Number(value);
     if(operations === '+')
     {
-      setResult(result += values)
-      console.log(result)
+      newRes += values
+      setResult( newRes)
     }
     else if(operations === '-')
     {
-      setResult(result -= values)
-      console.log(result)
+      newRes -= values
+      setResult( newRes)
     }
     else if(operations === 'x')
     {
-      setResult(result *= values)
-      console.log(result)
+      newRes *= values
+      setResult( newRes)
     }
     else if(operations === '/')
     {
-      setResult(result /= values)
-      console.log(result)
+      newRes /= values
+      setResult( newRes)
     }
     else if(operations === '%')
     {
-      setResult(result /= 100)
-      console.log(result)
+      setResult(newRes /= 100)
     }
     else if(operations === 'x^n')
     {
-      setResult(result = Math.pow(result, values))
-      console.log(result)
+      newRes = Math.pow(newRes, values)
+      setResult( newRes)
     }
     else if(operations === '√')
     {
-      setResult(result = Math.sqrt(result))
-      console.log(result)
+      newRes = Math.sqrt(newRes)
+      setResult( newRes)
     }
     else if(operations === 'С'){
       setShowResult(false);
-      result = ''
-      console.log(result)
+      setResult( newRes = '')
     }
-
-    setValue(String(result));
+    setValue(String(newRes));
   }
 
   return (
